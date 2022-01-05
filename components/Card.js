@@ -7,7 +7,7 @@ export function Card(props) {
       </div>
       <div className="bg-leaf-700 p-2 rounded-r-lg shadow-inner">
         <p className="text-sm text-leaf-100 mb-2">Yearly generated footprint which shows </p>
-        <button class="text-leaf-700 rounded-full bg-yellow-300 px-3 py-1 font-bold hover:text-leaf-800">CALCULATE</button>
+        <button className="text-leaf-700 rounded-full bg-yellow-300 px-3 py-1 font-bold hover:text-leaf-800">CALCULATE</button>
       </div>
     </div>
   );
