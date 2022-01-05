@@ -6,7 +6,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        Opensans: ["Open Sans", "cursive"],
+        Opensans: ["Open Sans", "sans-serif"],
       },
       colors: {
         transparent: 'transparent',
