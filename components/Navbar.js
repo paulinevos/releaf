@@ -6,7 +6,7 @@ import Image from 'next/image'
 
 const menuElements = [
   { name: "Home", targetUrl: "/" },
-  { name: "About Us", targetUrl: "/aboutus" },
+  { name: "About Us", targetUrl: "/about-us" },
 ];
 function NavBar() {
   const [mobile, setMobile] = useState(true);
