@@ -17,7 +17,7 @@ module.exports = {
         'leaf': {
           DEFAULT: '#D8EBDF',
           '50': '#FFFFFF',
-          '100': '#e5fdee',
+          '100': '#ddfdee',
           '200': '#b8e1c8',
           '300': '#b8e1c8',
           '400': '#b8e1c8',
