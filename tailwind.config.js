@@ -8,6 +8,9 @@ module.exports = {
       fontFamily: {
         Opensans: ["Open Sans", "sans-serif"],
       },
+      boxShadow: {
+        'inner-lg': 'inset 0 3px 6px -0.1px rgb(0 0 0 / 58%)',
+      },
       colors: {
         transparent: 'transparent',
         current: 'currentColor',
