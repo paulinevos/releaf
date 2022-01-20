@@ -14,13 +14,15 @@ function NavBar() {
   return (
     <nav>
       <div className="flex items-center justify-between py-2 px-4">
-        <div className="flex items-center">
-          <Image src="/leaf-logo.png"
-                 alt="Picture of the author"
-                 width={80}
-                 height={80}/>
-          <p className="text-2xl font-bold text-leaf-800 text-shadow">Releaf The Planet</p>
-        </div>
+        <Link href="/">
+          <div className="flex items-center">
+            <Image src="/leaf-logo.png"
+                   alt="Picture of the author"
+                   width={80}
+                   height={80}/>
+            <p className="text-2xl font-bold text-leaf-800 text-shadow">Releaf The Planet</p>
+          </div>
+        </Link>
         <div className="text-md grid justify-start items-center grid-flow-col gap-6 font-semibold text-leaf-800 text-shadow">
           {menuElements.map((e, index) => (
             <Link href={e.targetUrl} key={index} target="_blank">
