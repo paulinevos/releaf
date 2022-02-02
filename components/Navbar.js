@@ -1,11 +1,11 @@
 import Link from "next/link";
 import Menu from "../components/Menu";
-import { useRouter } from "next/router";
 import React, { useState } from "react";
 import Image from 'next/image'
 
 const menuElements = [
   { name: "Home", targetUrl: "/" },
+  { name: "Tips", targetUrl: "/tips" },
   { name: "About Us", targetUrl: "/about-us" },
 ];
 function NavBar() {
