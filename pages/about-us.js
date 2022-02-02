@@ -2,22 +2,32 @@ import Layout from "../components/Layout";
 import TeamMember from "../components/TeamMember";
 
 const TEAMDATA = [{
-  name:'David Attenborough',
-  title:'The Environment Show',
-  imageurl:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFU8n4gsZfWuY--UCJua3h1qeyeE2SJjjQCQ&usqp=CAU',
-  quote:'Immensely powerful though we are today, it’s equally clear that we’re going to be even more powerful tomorrow. And what’s more there will be greater compulsion upon us to use our power as the number of human beings on Earth increases still further. Clearly we could devastate the world. As far as we know, the Earth is the only place in the universe where there is life. Its continued survival now rests in our hands.'
+  name:'Diederick Vos',
+  title:'Consultant',
+  imageurl:'/team-diederickVos.png',
+  quote_nl:'Ik geloof in een wereld die we beter kunnen maken terwijl we een leuk leven leiden. Als we met z\'n allen een beetje bewuster zouden zijn en kleine verbeterstapjes zouden zetten ben ik ervan overtuigd dat we de wereld in een betere staat achter kunnen laten dan dat we haar ooit geërfd hebben.',
+  quote_en:'I believe in a world we can improve whilst maintaining an enjoyable life. If we all would be a little more conscious and we would continuously make small improvements I\'m convinced we could leave our planet in a better condition than we inherited it.'
 },
   {
-    name:'David Attenborough',
-    title:'The Environment Show',
-    imageurl:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSswTdb6VX3g4E8NY1pfL1jyr9OIhhQdY8PKg&usqp=CAU',
-    quote:'There are three times as many people in the world as when I started making television programs 56 years ago. It is frightening. We can’t go on as we have been. We are seeing the consequences in terms of ecology, pollution, space and food production.'
-  },
+  name:'Diederick Vos',
+  title:'Consultant',
+  imageurl:'/team-diederickVos.png',
+  quote_nl:'Ik geloof in een wereld die we beter kunnen maken terwijl we een leuk leven leiden. Als we met z\'n allen een beetje bewuster zouden zijn en kleine verbeterstapjes zouden zetten ben ik ervan overtuigd dat we de wereld in een betere staat achter kunnen laten dan dat we haar ooit geërfd hebben.',
+  quote_en:'I believe in a world we can improve whilst maintaining an enjoyable life. If we all would be a little more conscious and we would continuously make small improvements I\'m convinced we could leave our planet in a better condition than we inherited it.'
+},
   {
-    name:'David Attenborough',
-    title:'The Environment Show',
-    imageurl:'https://wac-cdn.atlassian.com/dam/jcr:ba03a215-2f45-40f5-8540-b2015223c918/Max-R_Headshot%20(1).jpg?cdnVersion=171',
-    quote:' wish the world was twice as big - and half of it was still unexplored." "It\'s surely our responsibility to do everything within our power to create a planet that provides a home not just for us, but for all life on Earth'
+  name:'Diederick Vos',
+  title:'Consultant',
+  imageurl:'/team-diederickVos.png',
+  quote_nl:'Ik geloof in een wereld die we beter kunnen maken terwijl we een leuk leven leiden. Als we met z\'n allen een beetje bewuster zouden zijn en kleine verbeterstapjes zouden zetten ben ik ervan overtuigd dat we de wereld in een betere staat achter kunnen laten dan dat we haar ooit geërfd hebben.',
+  quote_en:'I believe in a world we can improve whilst maintaining an enjoyable life. If we all would be a little more conscious and we would continuously make small improvements I\'m convinced we could leave our planet in a better condition than we inherited it.'
+},
+  {
+    name:'Diederick Vos',
+    title:'Consultant',
+    imageurl:'/team-diederickVos.png',
+    quote_nl:'Ik geloof in een wereld die we beter kunnen maken terwijl we een leuk leven leiden. Als we met z\'n allen een beetje bewuster zouden zijn en kleine verbeterstapjes zouden zetten ben ik ervan overtuigd dat we de wereld in een betere staat achter kunnen laten dan dat we haar ooit geërfd hebben.',
+    quote_en:'I believe in a world we can improve whilst maintaining an enjoyable life. If we all would be a little more conscious and we would continuously make small improvements I\'m convinced we could leave our planet in a better condition than we inherited it.'
   },
 ]
 
