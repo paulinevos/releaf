@@ -9,7 +9,7 @@ export default function Home() {
       <Layout>
         <main>
           <div className="flex items-center my-2 flex-wrap">
-            <div className="w-full p-6 pt-2 md:w-2/5">
+            <div className="w-full p-6 pt-2 lg:w-2/5">
               <h1 className="text-4xl font-bold text-leaf-800">
                 Calculate your FootPrint & Protect our Planet
               </h1>
@@ -20,7 +20,7 @@ export default function Home() {
               <Card/>
               </div>
             </div>
-            <div className="w-3/5 hidden md:block">
+            <div className="w-3/5 hidden lg:block">
               <Image
                 src="/leaf-bg.png"
                 alt="Environmental place Freepik"
