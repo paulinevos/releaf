@@ -20,7 +20,7 @@ function Layout({ children }) {
           name="twitter:description"
           content="Calculate your Carbon Footprint"
         />
-        <meta name="twitter:image" content="/twitter-img.png" />
+        <meta name="twitter:image" content="/twitter-img-2.png" />
       </Head>
       <div className="bg-leaf-800 min-h-screen p-6">
         <div className="font-Opensans bg-leaf-100 rounded-lg">
