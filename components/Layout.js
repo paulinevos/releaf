@@ -18,7 +18,7 @@ function Layout({ children }) {
         <meta name="twitter:title" content="Releaf The World" />
         <meta
           name="twitter:description"
-          content="Calculation of Carbon Footprint"
+          content="Calculate your Carbon Footprint"
         />
         <meta name="twitter:image" content="/twitter-img.png" />
       </Head>
