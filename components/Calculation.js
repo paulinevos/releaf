@@ -42,7 +42,7 @@ export function Calculation() {
     <div className="w-96 text-lg text-center">
       <p className="font-bold text-sm bg-leaf-800 text-white py-2 rounded my-3">CALCULATE YOUR CARBON FOOTPRINT</p>
       {data.map((e,index) =>
-          <div data-id={index} className="flex my-2 justify-center">
+          <div data-id={index} key={index} className="flex my-2 justify-center">
             <p className="w-24">{e.name}</p>
             <input type="number" min="0" step="100" value={e.consumption} data-id={index} className="py-1 pl-3 w-24 rounded-lg"
             onChange={handleCostsChange}/>
