@@ -38,7 +38,7 @@ export function Calculation() {
 
   const getTotalCosts = () => {
     return costs.reduce((total, e) => {
-      return total + Number(e.consumption);
+      return total + Number(e.consumption)* Number(e.carbonfootprintPerUnit);
     }, 0);
   };
 
