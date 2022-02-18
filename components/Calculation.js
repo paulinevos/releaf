@@ -6,25 +6,19 @@ export function Calculation() {
     {
       name:'Electricity',
       unit: 'kwh',
-      carbonfootprintPerUnit: 4,
+      carbonfootprintPerUnit: 0.649,
       consumption:'0'
     },
     {
       name:'Gas',
       unit: 'm3',
-      carbonfootprintPerUnit: 6,
+      carbonfootprintPerUnit: 1.8,
       consumption:'0'
     },
     {
       name:'Water',
       unit: 'm3',
-      carbonfootprintPerUnit: 23,
-      consumption:'0'
-    },
-    {
-      name:'Drive',
-      unit: 'km',
-      carbonfootprintPerUnit: 12,
+      carbonfootprintPerUnit: 0.3,
       consumption:'0'
     }
   ]
