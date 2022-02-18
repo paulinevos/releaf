@@ -51,7 +51,7 @@ export function Calculation() {
               <p className="mx-2 w-12">{e.unit}</p>
            </div>
         )}
-        <p className="font-bold bg-orange-600 px-4 py-2 rounded text-white">TOTAL: {getTotalCosts().toLocaleString()}</p>
+        <p className="font-bold bg-orange-600 px-4 py-2 rounded text-white">TOTAL: {getTotalCosts().toLocaleString()} kg</p>
       </div>
       <div className="flex justify-center my-6">
         <a className="twitter-share-button"
