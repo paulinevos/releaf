@@ -9,8 +9,8 @@ const TEAMDATA = [{
   quote_en:'I believe in a world we can improve whilst maintaining an enjoyable life. If we all would be a little more conscious and we would continuously make small improvements I\'m convinced we could leave our planet in a better condition than we inherited it.'
 },
   {
-  name:'Felix ...',
-  title:'...',
+  name:'Felix van Musschenbroek Greve',
+  title:'Consultant',
   imageurl:'/team-felix.png',
   quote_nl:'',
   quote_en:'Only midway through my 30’s, I realised that I had the power to make a meaningful difference for the environment myself Instead of always planning this revolutionary big change that was always put off, I started making smaller and more manageable steps. This allowed me to start, and all the positiveness that resulted from this, gave the push I needed to keep going further.With Releaf the Planet I hope to be at this starting point of other people’s journey towards more sustainable living. I want to help you take that ‘one small step’. '
