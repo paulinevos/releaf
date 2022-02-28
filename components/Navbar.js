@@ -4,12 +4,22 @@ import React, { useState } from "react";
 import Image from 'next/image'
 
 const menuElements = [
-  { name: "Home", targetUrl: "/" },
-  { name: "Tips", targetUrl: "/tips" },
-  { name: "About Us", targetUrl: "/about-us" },
+  { lang:"en", name: "Home", targetUrl: "/" },
+  { lang:"en",name: "Tips", targetUrl: "/tips" },
+  { lang:"en",name: "About Us", targetUrl: "/about-us" },
+  { lang:"nl", name: "Home", targetUrl: "/startpagina" },
+  { lang:"nl",name: "Tips", targetUrl: "/tips-nl" },
+  { lang:"nl",name: "About Us", targetUrl: "/over-ons" },
 ];
+
+
 function NavBar() {
   const [mobile, setMobile] = useState(true);
+
+  const [ lang, setLang] = useState('en');
+  const toggleLang = () => {
+    setLang(lang === "en" ? "nl" : "en");
+  };
 
   return (
     <nav>
@@ -23,27 +33,36 @@ function NavBar() {
             <p className="text-2xl font-bold text-leaf-800 text-shadow">Releaf The Planet</p>
           </div>
         </Link>
-        <div className="text-md grid justify-start items-center grid-flow-col gap-6 font-semibold text-leaf-800 text-shadow">
-          {menuElements.map((e, index) => (
-            <Link href={e.targetUrl} key={index} target="_blank">
-              <p
-                className={`hidden md:block hover:text-green-800 cursor-pointer text-sm lg:text-base`}
+        <div className="flex items-center font-semibold text-leaf-800 text-shadow">
+          <button
+            aria-label="Toggle Dark Mode"
+            type="button"
+            className="mr-4 font-semibold text-leaf-800 text-shadow"
+            onClick={() => toggleLang()}
+          >{lang}</button>
+          <div className="text-md grid justify-start items-center grid-flow-col gap-6">
+            {menuElements.map((e, index) => (
+              <Link href={e.targetUrl} key={index} target="_blank">
+                <p
+                  className={`hidden md:block hover:text-green-800 cursor-pointer text-sm lg:text-base`}
+                >
+                  {e.name}
+                </p>
+              </Link>
+            ))}
+            <div className="md:hidden">
+              <button
+                aria-label="Toggle Menu"
+                type="button"
+                className="w-10 h-10 flex justify-center items-center rounded"
+                onClick={() => setMobile(!mobile)}
               >
-                {e.name}
-              </p>
-            </Link>
-          ))}
-          <div className="md:hidden">
-            <button
-              aria-label="Toggle Menu"
-              type="button"
-              className="w-10 h-10 flex justify-center items-center rounded"
-              onClick={() => setMobile(!mobile)}
-            >
-              <Menu />
-            </button>
+                <Menu />
+              </button>
+            </div>
           </div>
         </div>
+
       </div>
       <div className="text-right font-semibold">
         <div className={mobile ? "hidden" : "block"}>
