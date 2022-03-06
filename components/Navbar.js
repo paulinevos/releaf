@@ -6,10 +6,7 @@ import Image from 'next/image'
 const menuElements = [
   { lang:"en", name: "Home", targetUrl: "/" },
   { lang:"en",name: "Tips", targetUrl: "/tips" },
-  { lang:"en",name: "About Us", targetUrl: "/about-us" },
-  { lang:"nl", name: "Home", targetUrl: "/startpagina" },
-  { lang:"nl",name: "Tips", targetUrl: "/tips-nl" },
-  { lang:"nl",name: "About Us", targetUrl: "/over-ons" },
+  { lang:"en",name: "About Us", targetUrl: "/about-us" }
 ];
 
 
