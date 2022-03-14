@@ -1,7 +1,11 @@
 import NavBar from "./Navbar";
 import Head from "next/head";
+import { LangContext } from "../contexts/LangContext";
+import React, { useState, useContext } from "react";
 
 function Layout({ children }) {
+  const [lang2, setLang2] = useContext(LangContext);
+
   return (
     <div>
       <Head>
@@ -28,7 +32,6 @@ function Layout({ children }) {
           <div>{children}</div>
         </div>
       </div>
-
     </div>
   );
 }

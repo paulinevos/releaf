@@ -1,5 +1,7 @@
 import Layout from "../components/Layout";
 import TeamMember from "../components/TeamMember";
+import {useContext} from "react";
+import {LangContext} from "../contexts/LangContext";
 
 const TEAMDATA = [{
   name:'Diederick Vos',
@@ -31,15 +33,34 @@ const TEAMDATA = [{
   },
 ]
 
+const PAGEDATA = {
+  en: {
+    title_1:"Why Reducing the Carbon Footprint is important for us?",
+    title_2:"Sustainability is a concept related to the development of products, goods, and services that involves meeting our present needs without compromising the ability of future generations to fulfill their own needs. Sustainability as a concept recognizes that the environment is an exhaustible resource. Therefore, it is important to use the environment and its resources rationally and protect it for the good of the Earth, our environment, humanity, & all living things.",
+    title_3:"Who we are?"
+  },
+  nl: {
+    title_1:"Ondernemen is stappen maken",
+    title_2:"We helpen je met informatie, tools en persoonlijk advies. Zodat de zaken goed lopen, nu en later.",
+    title_3:"Letter of Credit biedt zekerheid"
+  },
+}
+
 function AboutUs() {
+
+  const [lang2, setLang2] = useContext(LangContext);
+  let data = PAGEDATA.en;
+  if (lang2 == "nl")
+    data = PAGEDATA.nl;
+
   return (
     <div>
       <Layout>
         <div className="flex justify-center">
           <div className="m-6">
-            <p className="text-2xl font-bold text-leaf-800 mb-4 text-center">Why Reducing the Carbon Footprint is important for us?</p>
-            <p className="text-lg font-medium mb-6 text-center lg:mx-24 mx-2">Sustainability is a concept related to the development of products, goods, and services that involves meeting our present needs without compromising the ability of future generations to fulfill their own needs. Sustainability as a concept recognizes that the environment is an exhaustible resource. Therefore, it is important to use the environment and its resources rationally and protect it for the good of the Earth, our environment, humanity, & all living things.</p>
-            <p className="text-2xl font-bold text-leaf-800 mt-6 text-center">Who we are?</p>
+            <p className="text-2xl font-bold text-leaf-800 mb-4 text-center">{data.title_1}</p>
+            <p className="text-lg font-medium mb-6 text-center lg:mx-24 mx-2">{data.title_2}</p>
+            <p className="text-2xl font-bold text-leaf-800 mt-6 text-center">{data.title_3}</p>
             {TEAMDATA.map((e,index) =>
               <TeamMember key={index} member={e}/>
             )

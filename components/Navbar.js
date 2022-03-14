@@ -1,25 +1,23 @@
+import React, { useState, useContext } from "react"
 import Link from "next/link";
-import Menu from "../components/Menu";
-import React, { useState } from "react";
-import Image from 'next/image'
+import Menu from "./Menu";
+import Image from 'next/image';
+import {LangContext} from "../contexts/LangContext";
 
 const menuElements = [
-  { lang:"en", name: "Home", targetUrl: "/" },
-  { lang:"en",name: "Tips", targetUrl: "/tips" },
-  { lang:"en",name: "About Us", targetUrl: "/about-us" }
+  {name: "Home", targetUrl: "/" },
+  {name: "Tips", targetUrl: "/tips" },
+  {name: "About Us", targetUrl: "/about-us" }
 ];
 
-
 function NavBar() {
-  const [mobile, setMobile] = useState(true);
 
-  const [ lang, setLang] = useState('en');
-  const toggleLang = () => {
-    setLang(lang === "en" ? "nl" : "en");
-  };
+  const [mobile, setMobile] = useState(true);
+  const [lang, setLang] = useContext(LangContext);
 
   return (
-    <nav>
+    <LangContext.Provider value={[lang, setLang]}>
+      <nav>
       <div className="flex items-center justify-between py-2 px-4">
         <Link href="/">
           <div className="flex items-center">
@@ -35,7 +33,7 @@ function NavBar() {
             aria-label="Toggle Dark Mode"
             type="button"
             className="mr-4 font-semibold text-leaf-800 text-shadow"
-            onClick={() => toggleLang()}
+            onClick={() => (setLang(lang === "en" ? "nl" : "en"))}
           >{lang}</button>
           <div className="text-md grid justify-start items-center grid-flow-col gap-6">
             {menuElements.map((e, index) => (
@@ -59,7 +57,6 @@ function NavBar() {
             </div>
           </div>
         </div>
-
       </div>
       <div className="text-right font-semibold">
         <div className={mobile ? "hidden" : "block"}>
@@ -75,6 +72,7 @@ function NavBar() {
         </div>
       </div>
     </nav>
+    </LangContext.Provider>
   );
 }
 
