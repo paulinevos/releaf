@@ -6,7 +6,7 @@ import {LangContext} from "../contexts/LangContext";
 
 const menuElements = [
   {name: "Home", targetUrl: "/" },
-  {name: "Tips", targetUrl: "/tips" },
+  {name: "Our Methods", targetUrl: "/our-methods" },
   {name: "About Us", targetUrl: "/about-us" }
 ];
 
