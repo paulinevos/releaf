@@ -40,13 +40,13 @@ export default function Home() {
         <main>
           <div className="flex items-center my-2 flex-wrap">
             <div className="w-full p-6 pt-2 lg:w-2/5">
-              <h1 className="text-4xl font-bold text-leaf-800 mb-3">{pageContent.title}</h1>
+              <h1 className="text-3xl font-bold text-leaf-800 mb-3">{pageContent.title}</h1>
               <p className="text-xl text-leaf-800 font-extrabold mb-3">“{pageContent.subtitle}”</p>
               <p className="text-leaf-800 font-bold my-3">{pageContent.question}</p>
-              <p className="text-sm text-leaf-800 my-1">{pageContent.q_description}</p>
-              <p className="text-sm text-leaf-800 my-1">• {pageContent.q_1}</p>
-              <p className="text-sm text-leaf-800 my-1">• {pageContent.q_2}</p>
-              <p className="text-sm text-leaf-800 my-1">{pageContent.sub_description}</p>
+              <p className="text-leaf-800 my-2">{pageContent.q_description}</p>
+              <p className="text-leaf-800 my-1 ml-4">•   {pageContent.q_1}</p>
+              <p className="text-leaf-800 my-1 ml-4">•   {pageContent.q_2}</p>
+              <p className="text-leaf-800 my-2">{pageContent.sub_description}</p>
               <div className="text-right">
                 <button className="bg-leaf-800 px-4 py-2 text-white shadow-2xl rounded-2xl font-semibold m-4 hover:bg-yellow-300 hover:text-leaf-800">{pageContent.btn}</button>
               </div>
