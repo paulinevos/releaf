@@ -5,9 +5,8 @@ import Image from 'next/image';
 import {LangContext} from "../contexts/LangContext";
 
 const menuElements = [
-  {name: "Home", targetUrl: "/" },
-  {name: "Our Methods", targetUrl: "/our-methods" },
-  {name: "About Us", targetUrl: "/about-us" }
+  {name: "Our Methods", nl_name:"Onze aanpak", targetUrl: "/our-methods" },
+  {name: "About Us", nl_name:"Over ons", targetUrl: "/about-us" }
 ];
 
 function NavBar() {
@@ -39,9 +38,9 @@ function NavBar() {
             {menuElements.map((e, index) => (
               <Link href={e.targetUrl} key={index} target="_blank">
                 <p
-                  className={`hidden md:block hover:text-green-800 cursor-pointer text-sm lg:text-base`}
+                  className={`hidden md:block hover:text-green-800 cursor-pointer text-sm lg:text-base w-28 text-center hover:bg-yellow-300 py-2 rounded-2xl px-1`}
                 >
-                  {e.name}
+                  {lang === "en" ? e.name: e.nl_name}
                 </p>
               </Link>
             ))}

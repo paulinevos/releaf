@@ -1,15 +1,17 @@
 
 export function TeamMember(props) {
+
+  let quote = props.member.quote_en
+  if (props.lang == 'nl')
+    quote = props.member.quote_nl
+
   return (
-    <figure className="lg:flex lg:p-8 p-3">
+    <figure className="lg:flex items-center lg:p-8 p-3">
       <img className="w-48 h-48 rounded-full p-4 bg-leaf-400 shadow-inner-lg mx-auto lg:mb-2 mb-6 object-cover" src={props.member.imageurl} alt={props.member.name} width="384" height="512"/>
       <div className="space-y-4 pl-6">
         <blockquote>
           <p className="text-md font-medium mb-2">
-            “{props.member.quote_nl}”
-          </p>
-          <p className="text-md font-medium">
-            “{props.member.quote_en}”
+            “{quote}”
           </p>
         </blockquote>
         <figcaption>

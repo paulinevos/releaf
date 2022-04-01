@@ -3,6 +3,7 @@ import Image from 'next/image'
 import Layout from "../components/Layout";
 import {LangContext} from "../contexts/LangContext";
 import {useContext} from "react";
+import Link from "next/link";
 
 export default function Home() {
   const [lang2] = useContext(LangContext);
@@ -44,13 +45,14 @@ export default function Home() {
               <p className="text-xl text-leaf-800 font-extrabold mb-3">“{pageContent.subtitle}”</p>
               <p className="text-leaf-800 font-bold my-3">{pageContent.question}</p>
               <p className="text-leaf-800 my-2">{pageContent.q_description}</p>
-              <p className="text-leaf-800 my-1 ml-4">•   {pageContent.q_1}</p>
-              <p className="text-leaf-800 my-1 ml-4">•   {pageContent.q_2}</p>
+              <p className="text-leaf-800 my-1 ml-4">•   <span className="ml-3">{pageContent.q_1}</span></p>
+              <p className="text-leaf-800 my-1 ml-4">•   <span className="ml-3">{pageContent.q_2}</span></p>
               <p className="text-leaf-800 my-2">{pageContent.sub_description}</p>
-              <div className="text-right">
-                <button className="bg-leaf-800 px-4 py-2 text-white shadow-2xl rounded-2xl font-semibold m-4 hover:bg-yellow-300 hover:text-leaf-800">{pageContent.btn}</button>
-              </div>
-
+              <Link href="/our-methods">
+                <div className="text-right">
+                  <button className="bg-leaf-800 px-4 py-2 text-white shadow-2xl rounded-2xl font-semibold m-4 hover:bg-yellow-300 hover:text-leaf-800">{pageContent.btn}</button>
+                </div>
+              </Link>
             </div>
             <div className="w-3/5 hidden lg:block">
               <Image

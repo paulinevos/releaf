@@ -14,7 +14,7 @@ const TEAMDATA = [{
   name:'Felix van Musschenbroek Greve',
   title:'Consultant',
   imageurl:'/team-felix.png',
-  quote_nl:'',
+  quote_nl:'Pas halverwege mijn dertigste realiseerde ik me dat ik de kracht had om zelf een betekenisvol verschil te maken voor het milieu In plaats van altijd die revolutionaire grote verandering te plannen die altijd werd uitgesteld, begon ik kleinere en meer behapbare stappen te zetten. Zo kon ik beginnen, en alle positiviteit die daaruit voortkwam, gaf me het zetje dat ik nodig had om verder te gaan.',
   quote_en:'Only midway through my 30’s, I realised that I had the power to make a meaningful difference for the environment myself Instead of always planning this revolutionary big change that was always put off, I started making smaller and more manageable steps. This allowed me to start, and all the positiveness that resulted from this, gave the push I needed to keep going further.With Releaf the Planet I hope to be at this starting point of other people’s journey towards more sustainable living. I want to help you take that ‘one small step’. '
 },
   {
@@ -33,36 +33,34 @@ const TEAMDATA = [{
   },
 ]
 
-const PAGEDATA = {
-  en: {
+const PAGEDATA = [
+  {
     title_1:"Why Reducing the Carbon Footprint is important for us?",
     title_2:"Sustainability is a concept related to the development of products, goods, and services that involves meeting our present needs without compromising the ability of future generations to fulfill their own needs. Sustainability as a concept recognizes that the environment is an exhaustible resource. Therefore, it is important to use the environment and its resources rationally and protect it for the good of the Earth, our environment, humanity, & all living things.",
     title_3:"Who we are?"
   },
-  nl: {
+  {
     title_1:"Ondernemen is stappen maken",
     title_2:"We helpen je met informatie, tools en persoonlijk advies. Zodat de zaken goed lopen, nu en later.",
     title_3:"Letter of Credit biedt zekerheid"
-  },
-}
+  }
+]
+
 
 function AboutUs() {
 
   const [lang2, setLang2] = useContext(LangContext);
-  let data = PAGEDATA.en;
-  if (lang2 == "nl")
-    data = PAGEDATA.nl;
 
   return (
     <div>
       <Layout>
         <div className="flex justify-center">
           <div className="m-6">
-            <p className="text-2xl font-bold text-leaf-800 mb-4 text-center">{data.title_1}</p>
-            <p className="text-lg font-medium mb-6 text-center lg:mx-24 mx-2">{data.title_2}</p>
-            <p className="text-2xl font-bold text-leaf-800 mt-6 text-center">{data.title_3}</p>
+            <p className="text-2xl font-bold text-leaf-800 mb-4 text-center">{PAGEDATA.title_1}</p>
+            <p className="text-lg font-medium mb-6 text-center lg:mx-24 mx-2">{PAGEDATA.title_2}</p>
+            <p className="text-2xl font-bold text-leaf-800 mt-6 text-center">{PAGEDATA.title_3}</p>
             {TEAMDATA.map((e,index) =>
-              <TeamMember key={index} member={e}/>
+              <TeamMember key={index} member={e} lang={lang2}/>
             )
             }
           </div>
