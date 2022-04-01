@@ -45,8 +45,6 @@ const PAGEDATA = [
     title_3:"Letter of Credit biedt zekerheid"
   }
 ]
-
-
 function AboutUs() {
 
   const [lang2, setLang2] = useContext(LangContext);
@@ -60,7 +58,7 @@ function AboutUs() {
             <p className="text-lg font-medium mb-6 text-center lg:mx-24 mx-2">{PAGEDATA.title_2}</p>
             <p className="text-2xl font-bold text-leaf-800 mt-6 text-center">{PAGEDATA.title_3}</p>
             {TEAMDATA.map((e,index) =>
-              <TeamMember key={index} member={e} lang={lang2}/>
+              <TeamMember key={index} member={e}/>
             )
             }
           </div>

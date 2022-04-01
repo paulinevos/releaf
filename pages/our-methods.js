@@ -39,7 +39,7 @@ function OurMethods() {
   ]
 
   let pageContent = content[0]
-  if (lang2 == 'en')
+  if (lang2 == 'nl')
     pageContent = content[1]
   return (
     <div>
