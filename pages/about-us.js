@@ -23,14 +23,7 @@ const TEAMDATA = [{
   imageurl:'/team-diederickVos.png',
   quote_nl:'Ik geloof in een wereld die we beter kunnen maken terwijl we een leuk leven leiden. Als we met z\'n allen een beetje bewuster zouden zijn en kleine verbeterstapjes zouden zetten ben ik ervan overtuigd dat we de wereld in een betere staat achter kunnen laten dan dat we haar ooit geërfd hebben.',
   quote_en:'I believe in a world we can improve whilst maintaining an enjoyable life. If we all would be a little more conscious and we would continuously make small improvements I\'m convinced we could leave our planet in a better condition than we inherited it.'
-},
-  {
-    name:'Diederick Vos',
-    title:'Consultant',
-    imageurl:'/team-diederickVos.png',
-    quote_nl:'Ik geloof in een wereld die we beter kunnen maken terwijl we een leuk leven leiden. Als we met z\'n allen een beetje bewuster zouden zijn en kleine verbeterstapjes zouden zetten ben ik ervan overtuigd dat we de wereld in een betere staat achter kunnen laten dan dat we haar ooit geërfd hebben.',
-    quote_en:'I believe in a world we can improve whilst maintaining an enjoyable life. If we all would be a little more conscious and we would continuously make small improvements I\'m convinced we could leave our planet in a better condition than we inherited it.'
-  },
+}
 ]
 
 const PAGEDATA = [
@@ -48,19 +41,24 @@ const PAGEDATA = [
 function AboutUs() {
 
   const [lang2, setLang2] = useContext(LangContext);
+  let titles = PAGEDATA[0]
+  if (lang2 == 'nl')
+    titles = PAGEDATA[1]
 
   return (
     <div>
       <Layout>
         <div className="flex justify-center">
           <div className="m-6">
-            <p className="text-2xl font-bold text-leaf-800 mb-4 text-center">{PAGEDATA.title_1}</p>
-            <p className="text-lg font-medium mb-6 text-center lg:mx-24 mx-2">{PAGEDATA.title_2}</p>
-            <p className="text-2xl font-bold text-leaf-800 mt-6 text-center">{PAGEDATA.title_3}</p>
-            {TEAMDATA.map((e,index) =>
-              <TeamMember key={index} member={e}/>
-            )
-            }
+            <p className="text-2xl font-bold text-leaf-800 mb-4 text-center">{titles.title_1}</p>
+            <p className="text-lg font-medium mb-6 text-center lg:mx-24 mx-2">{titles.title_2}</p>
+            <p className="text-2xl font-bold text-leaf-800 my-6 text-center">{titles.title_3}</p>
+            <div className="flex flex-wrap justify-center lg:mx-16">
+              {TEAMDATA.map((e,index) =>
+                <TeamMember key={index} member={e}/>
+              )
+              }
+            </div>
           </div>
     </div>
       </Layout>

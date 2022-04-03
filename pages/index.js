@@ -50,7 +50,7 @@ export default function Home() {
               <p className="text-leaf-800 my-2">{pageContent.sub_description}</p>
               <Link href="/our-methods">
                 <div className="text-right">
-                  <button className="bg-leaf-800 px-4 py-2 text-white shadow-2xl rounded-2xl font-semibold m-4 hover:bg-yellow-300 hover:text-leaf-800">{pageContent.btn}</button>
+                  <button className="bg-leaf-800 px-4 py-2 text-white shadow-2xl rounded-2xl font-semibold m-4 hover:bg-leaf-700 transition duration-150 delay-75">{pageContent.btn}</button>
                 </div>
               </Link>
             </div>

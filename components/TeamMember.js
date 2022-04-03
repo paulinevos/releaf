@@ -9,16 +9,16 @@ export function TeamMember(props) {
     quote = props.member.quote_en
 
   return (
-    <figure className="lg:flex items-center lg:p-8 p-3">
+    <figure className="w-96 items-center m-8">
       <img className="w-48 h-48 rounded-full p-4 bg-leaf-400 shadow-inner-lg mx-auto lg:mb-2 mb-6 object-cover" src={props.member.imageurl} alt={props.member.name} width="384" height="512"/>
       <div className="space-y-4 pl-6">
-        <blockquote>
-          <p className="text-md font-medium mb-2">{quote}</p>
-        </blockquote>
-        <figcaption>
+        <figcaption className="text-center">
           <p className="font-semibold">{props.member.name}</p>
           <p className="opacity-70">{props.member.title}</p>
         </figcaption>
+        <blockquote>
+          <p className="text-md font-medium mb-2 text-center">"{quote}"</p>
+        </blockquote>
       </div>
     </figure>
   );

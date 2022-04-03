@@ -28,22 +28,22 @@ function NavBar() {
           </div>
         </Link>
         <div className="flex items-center font-semibold text-leaf-800 text-shadow">
-          <button
-            aria-label="Toggle Dark Mode"
-            type="button"
-            className="mr-4 font-semibold text-leaf-800 text-shadow"
-            onClick={() => (setLang(lang === "en" ? "nl" : "en"))}
-          >{lang === "en" ? "nl": "en"}</button>
           <div className="text-md grid justify-start items-center grid-flow-col gap-6">
             {menuElements.map((e, index) => (
               <Link href={e.targetUrl} key={index} target="_blank">
                 <p
-                  className={`hidden md:block hover:text-green-800 cursor-pointer text-sm lg:text-base w-28 text-center hover:bg-yellow-300 py-2 rounded-2xl px-1`}
+                  className={`hidden md:block hover:underline cursor-pointer text-sm lg:text-base w-28 text-center transition py-2 rounded-2xl px-1`}
                 >
                   {lang === "en" ? e.name: e.nl_name}
                 </p>
               </Link>
             ))}
+            <button
+              aria-label="Toggle Dark Mode"
+              type="button"
+              className="mr-4 font-semibold text-leaf-800 text-shadow"
+              onClick={() => (setLang(lang === "en" ? "nl" : "en"))}
+            >{lang === "en" ? "nl": "en"}</button>
             <div className="md:hidden">
               <button
                 aria-label="Toggle Menu"
