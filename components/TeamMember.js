@@ -17,7 +17,7 @@ export function TeamMember(props) {
           <p className="opacity-70">{props.member.title}</p>
         </figcaption>
         <blockquote>
-          <p className="text-md font-medium mb-2 text-center">"{quote}"</p>
+          <p className="text-md font-medium mb-2 text-center">{quote}</p>
         </blockquote>
       </div>
     </figure>
