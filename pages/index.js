@@ -45,8 +45,14 @@ export default function Home() {
               <p className="text-xl text-leaf-800 font-extrabold mb-3">“{pageContent.subtitle}”</p>
               <p className="text-leaf-800 font-bold my-3">{pageContent.question}</p>
               <p className="text-leaf-800 my-2">{pageContent.q_description}</p>
-              <p className="text-leaf-800 my-1 ml-4">•   <span className="ml-3">{pageContent.q_1}</span></p>
-              <p className="text-leaf-800 my-1 ml-4">•   <span className="ml-3">{pageContent.q_2}</span></p>
+              <div className="flex ml-4">
+                <div className="pt-1">•   </div>
+                <p className="text-leaf-800 my-1 ml-4">{pageContent.q_1}</p>
+              </div>
+              <div className="flex ml-4">
+                <div className="pt-1">•   </div>
+                <p className="text-leaf-800 my-1 ml-4">{pageContent.q_2}</p>
+              </div>
               <p className="text-leaf-800 my-2">{pageContent.sub_description}</p>
               <Link href="/our-methods" passHref>
                 <div className="text-right">
