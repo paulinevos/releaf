@@ -44,11 +44,10 @@ function OurMethods() {
   return (
     <div>
       <Layout>
-        <div className="text-leaf-800 pb-24 mx-8">
+        <div className="text-leaf-800 pb-24 mx-4 lg:mx-8">
           <h1 className="text-3xl font-bold text-leaf-800 my-6 text-center">{pageContent.title}</h1>
-
           <div className="my-4">
-            <div className="flex p-4 m-4">
+            <div className="block md:flex p-4 m-4">
               <div className="relative flex justify-center items-center mb-4 mr-4">
                 <div className="absolute font-bold text-5xl rounded-full bg-leaf-100 m-0 flex items-center justify-center w-20 h-20 pt-1 text-leaf-800">
                   <svg width="595px" height="595px" viewBox="0 0 595 595" version="1.1">
@@ -68,7 +67,7 @@ function OurMethods() {
           </div>
 
           <div className="my-4">
-            <div className="flex p-4 m-4">
+            <div className="block md:flex p-4 m-4">
               <div className="relative flex justify-center items-center mb-4 mr-4">
                 <div className="absolute font-bold text-5xl rounded-full bg-leaf-100 m-0 flex items-center justify-center w-20 h-20 pt-1 text-leaf-800">
                   <svg width="595px" height="595px" viewBox="0 0 595 595" version="1.1" >
@@ -89,7 +88,7 @@ function OurMethods() {
           </div>
 
           <div className="my-4">
-            <div className="flex p-4 m-4">
+            <div className="block md:flex p-4 m-4">
               <div className="relative flex justify-center items-center mb-4 mr-4">
                 <div className="absolute font-bold text-5xl rounded-full bg-leaf-100 m-0 flex items-center justify-center w-20 h-20 pt-1 text-leaf-800">
                   <svg width="595px" height="595px" viewBox="0 0 595 595" version="1.1">

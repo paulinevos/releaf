@@ -48,19 +48,17 @@ function AboutUs() {
   return (
     <div>
       <Layout>
-        <div className="flex justify-center">
-          <div className="m-6">
-            <p className="text-2xl font-bold text-leaf-800 mb-4 text-center">{titles.title_1}</p>
-            <p className="text-lg font-medium mb-6 text-center lg:mx-24 mx-2">{titles.title_2}</p>
-            <p className="text-2xl font-bold text-leaf-800 my-6 text-center">{titles.title_3}</p>
-            <div className="flex flex-wrap justify-center lg:mx-16">
-              {TEAMDATA.map((e,index) =>
-                <TeamMember key={index} member={e}/>
-              )
-              }
-            </div>
+        <div className="text-leaf-800 pb-24 mx-1 lg:mx-8 my-4">
+          <p className="text-2xl font-bold text-leaf-800 mb-4 text-left md:text-center">{titles.title_1}</p>
+          <p className="text-lg font-medium mb-6 text-left md:text-center mx-2 lg:mx-24">{titles.title_2}</p>
+          <p className="text-2xl font-bold text-leaf-800 my-6 text-center">{titles.title_3}</p>
+          <div className="flex flex-wrap justify-center lg:mx-16">
+            {TEAMDATA.map((e,index) =>
+              <TeamMember key={index} member={e}/>
+            )
+            }
           </div>
-    </div>
+        </div>
       </Layout>
     </div>
   );
