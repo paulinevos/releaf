@@ -18,7 +18,7 @@ function NavBar() {
     <LangContext.Provider value={[lang, setLang]}>
       <nav>
       <div className="flex items-center justify-between py-2 px-4">
-        <Link href="/">
+        <Link href="/" passHref>
           <div className="flex items-center">
             <Image src="/leaf-logo.png"
                    alt="Picture of the author"
@@ -30,7 +30,7 @@ function NavBar() {
         <div className="flex items-center font-semibold text-leaf-800 text-shadow">
           <div className="text-md grid justify-start items-center grid-flow-col gap-6">
             {menuElements.map((e, index) => (
-              <Link href={e.targetUrl} key={index} target="_blank">
+              <Link href={e.targetUrl} key={index} target="_blank" passHhref>
                 <p
                   className={`hidden md:block hover:underline cursor-pointer text-sm lg:text-base w-28 text-center transition py-2 rounded-2xl px-1`}
                 >
@@ -60,7 +60,7 @@ function NavBar() {
       <div className="text-right font-semibold">
         <div className={mobile ? "hidden" : "block"}>
           {menuElements.map((e, index) => (
-            <Link href={e.targetUrl} key={index}>
+            <Link href={e.targetUrl} key={index} passHref>
               <p
                 className={`hover:text-leaf-700 cursor-pointer p-3`}
               >
