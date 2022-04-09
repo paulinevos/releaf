@@ -19,7 +19,8 @@ function OurMethods() {
       q2_a3_2:'An unexpected and therefore highly appreciated benefit for your employees',
       q2_a3_3:'And last but not least a grateful planet ',
       q3:'What exactly are we going to do and what are the costs?',
-      q3_a1:'This will be based on your specific situation nd wishes. Contact us at info@releaftheplanet.nl or +31(0)615311627 ',
+      q3_a1:'This will be based on your specific situation and wishes.',
+      q3_a2:'Contact us at info@releaftheplanet.nl or +31(0)615311627',
     },
     {
       title:'Onze aanpak',
@@ -34,20 +35,23 @@ function OurMethods() {
       q2_a3_2:'Een onverwachte en daarom extra indrukwekkende secundaire arbeidsvoorwaarde voor jouw medewerkers',
       q2_a3_3:'En uiteraard is onze planeet je ook dankbaar',
       q3:'Wat gaan we precies doen en wat kost het?',
-      q3_a1:'Dat bepalen we in overleg op basis van jouw specifieke situatie. Neem vrijblijvend contact met ons op via info@releaftheplanet.nl of +31(0)615311627 ',
+      q3_a1:'Dat bepalen we in overleg op basis van jouw specifieke situatie.',
+      q3_a2:'Neem vrijblijvend contact met ons op via info@releaftheplanet.nl of +31(0)615311627 ',
     }
   ]
 
   let pageContent = content[0]
-  if (lang2 == 'nl')
+
+  if (lang2 == 'nl') {
     pageContent = content[1]
+  }
   return (
     <div>
       <Layout>
-        <div className="text-leaf-800 pb-24 mx-4 lg:mx-8">
+        <div className="text-leaf-800 pb-24 mx-1 lg:mx-8">
           <h1 className="text-3xl font-bold text-leaf-800 my-6 text-center">{pageContent.title}</h1>
           <div className="my-4">
-            <div className="block md:flex p-4 m-4">
+            <div className="block md:flex p-1 md:p-4 m-4">
               <div className="relative flex justify-center items-center mb-4 mr-4">
                 <div className="absolute font-bold text-5xl rounded-lg bg-leaf-100 m-0 flex items-center justify-center w-20 h-20 pt-1 text-leaf-800">
                   <svg width="595px" height="595px" viewBox="0 0 595 595" version="1.1">
@@ -102,6 +106,26 @@ function OurMethods() {
               <div>
                 <p className="text-xl font-semibold mb-2">{pageContent.q3}</p>
                 <p className="text-lg ">{pageContent.q3_a1}</p>
+                <p className={`text-xl font-semibold ${lang2 == 'en' ? 'block' : 'hidden'}`}>
+                  Contact us at {lang2}
+                  <a href="mailto:info@releaftheplanet.nl">
+                    {' '} info@releaftheplanet.nl {' '}
+                  </a>
+                  or {' '}
+                  <a href="tel:+31(0)615311627">
+                    {' '} +31(0)615311627
+                  </a>
+                </p>
+                <p className={`text-xl font-semibold ${lang2 == 'nl' ? 'block' : 'hidden'}`}>
+                  Neem vrijblijvend contact met ons op via
+                  <a href="mailto:info@releaftheplanet.nl">
+                    {' '} info@releaftheplanet.nl {' '}
+                  </a>
+                  of {' '}
+                  <a href="tel:+31(0)615311627">
+                    {' '} +31(0)615311627
+                  </a>
+                </p>
               </div>
             </div>
           </div>

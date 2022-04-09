@@ -40,27 +40,27 @@ export default function Home() {
       <Layout>
         <main>
           <div className="flex items-center my-2 flex-wrap">
-            <div className="w-full p-6 pt-2 lg:w-2/5">
-              <h1 className="text-3xl font-bold text-leaf-800 mb-3">{pageContent.title}</h1>
+            <h1 className="text-3xl font-bold text-leaf-800 mb-6 px-2 md:px-12 xl:px-96 text-center mx-auto">{pageContent.title}</h1>
+            <div className="w-full p-6 pt-2 lg:w-1/2 lg:p-6 xl:p-12 ">
               <p className="text-xl text-leaf-800 font-extrabold mb-3">“{pageContent.subtitle}”</p>
-              <p className="text-leaf-800 font-bold my-3">{pageContent.question}</p>
-              <p className="text-leaf-800 my-2">{pageContent.q_description}</p>
+              <p className="text-lg text-leaf-800 font-bold my-3">{pageContent.question}</p>
+              <p className="text-lg text-leaf-800 my-2">{pageContent.q_description}</p>
               <div className="flex ml-4">
                 <div className="pt-1">•   </div>
-                <p className="text-leaf-800 my-1 ml-4">{pageContent.q_1}</p>
+                <p className="text-lg text-leaf-800 my-1 ml-4">{pageContent.q_1}</p>
               </div>
               <div className="flex ml-4">
                 <div className="pt-1">•   </div>
-                <p className="text-leaf-800 my-1 ml-4">{pageContent.q_2}</p>
+                <p className="text-lg text-leaf-800 my-1 ml-4">{pageContent.q_2}</p>
               </div>
-              <p className="text-leaf-800 my-2">{pageContent.sub_description}</p>
+              <p className="text-lg text-leaf-800 my-2">{pageContent.sub_description}</p>
               <Link href="/our-methods" passHref>
                 <div className="text-right">
                   <button className="bg-leaf-800 px-4 py-2 text-white shadow-2xl rounded-2xl font-semibold m-4 hover:bg-leaf-700 transition duration-150 delay-75">{pageContent.btn}</button>
                 </div>
               </Link>
             </div>
-            <div className="w-3/5 hidden lg:block">
+            <div className="w-1/2 hidden lg:block">
               <Image
                 src="/leaf-bg.png"
                 alt="Environmental place Freepik"

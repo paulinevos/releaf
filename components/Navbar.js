@@ -5,6 +5,7 @@ import Image from 'next/image';
 import {LangContext} from "../contexts/LangContext";
 
 const menuElements = [
+  {name: "Home", nl_name:"Home", targetUrl: "/" },
   {name: "Our Methods", nl_name:"Onze aanpak", targetUrl: "/our-methods" },
   {name: "About Us", nl_name:"Over ons", targetUrl: "/about-us" }
 ];
