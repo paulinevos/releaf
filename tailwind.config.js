@@ -27,6 +27,10 @@ module.exports = {
           '800': '#294147',
           '900': '#1d2e31'
         },
+        'yellow-custom': {
+          DEFAULT: '#D8EBDF',
+          '400': '#eecb68',
+        },
       },
     },
   },
