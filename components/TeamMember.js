@@ -5,8 +5,12 @@ export function TeamMember(props) {
 
   const [lang2, setLang2] = useContext(LangContext);
   let quote = props.member.quote_nl
-  if (lang2 == 'en')
+  let title = props.member.title_nl
+  if (lang2 == 'en') {
     quote = props.member.quote_en
+    title = props.member.title_en
+  }
+
 
   return (
     <figure className="w-96 items-center m-2 md:m-8">
@@ -14,7 +18,7 @@ export function TeamMember(props) {
       <div className="space-y-4 pl-0 md:pl-6">
         <figcaption className="text-center">
           <p className="font-semibold">{props.member.name}</p>
-          <p className="opacity-70">{props.member.title}</p>
+          <p className="opacity-70">{title}</p>
         </figcaption>
         <blockquote>
           <p className="text-md font-medium mb-2 text-left md:text-center">{quote}</p>
