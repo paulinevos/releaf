@@ -23,9 +23,9 @@ const TEAMDATA = [{
 
 const PAGEDATA = [
   {
-    title_1:'Why Reducing the Carbon Footprint is important for us?',
-    title_2:'Sustainability is a concept related to the development of products, goods, and services that involves meeting our present needs without compromising the ability of future generations to fulfill their own needs. Sustainability as a concept recognizes that the environment is an exhaustible resource. Therefore, it is important to use the environment and its resources rationally and protect it for the good of the Earth, our environment, humanity, & all living things.',
-    title_3:'Who we are?'
+    title_1:'Our mission',
+    title_2:'A sustainable economy for everyone, everywhere ',
+    title_3:'We’ll challenge others to follow suit. Therefore we directly invest 90% of our profits in sustainability. '
   },
   {
     title_1:'Onze missie',
