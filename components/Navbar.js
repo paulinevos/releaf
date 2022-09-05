@@ -40,11 +40,11 @@ function NavBar() {
               </Link>
             ))}
             <button
-              aria-label="Toggle Dark Mode"
+              aria-label="Toggle language"
               type="button"
               className="mr-4 font-semibold text-leaf-800 text-shadow"
               onClick={() => (setLang(lang === "en" ? "nl" : "en"))}
-            >{lang === "en" ? "nl": "en"}</button>
+            >{lang === "en" ? "Nederlands": "English"}</button>
             <div className="md:hidden">
               <button
                 aria-label="Toggle Menu"
